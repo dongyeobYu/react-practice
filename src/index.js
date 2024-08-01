@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  // StrictMode -> 오류 검사하기 위해 렌더링 단계에서 의도적으로 함수 2번 호출
   <React.StrictMode>
     <App />
   </React.StrictMode>
