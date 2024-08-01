@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import './App.css';
 import TOC from './components/Toc';
@@ -60,6 +61,25 @@ function App() {
         setMode(mode);
       }}></Control>
       {_article}
+=======
+import React from 'react';
+import './App.css'
+import TOC from './components/Toc'
+import Subject from './components/Subject'
+import Content from './components/Content';
+
+function App() {
+
+  const state = {
+    subject : {title: 'WEB', sub:'World Wide Web'}
+  }
+
+  return (
+    <div className="App">
+      <Subject title={state.subject.title} sub={state.subject.sub}></Subject>
+      <TOC></TOC>
+      <Content title="Contents header" sub="Article Contents"></Content>
+>>>>>>> 7da937a13c6f022f6d72c3c19284665231a839b3
     </div>
   );
 }
