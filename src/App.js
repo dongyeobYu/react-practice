@@ -26,31 +26,9 @@ function App() {
   var _desc;
   var _article;
 
-  if(mode === 'welcome'){
-    _title = state.welcome.title; 
-    _desc = state.welcome.desc;   
-    _article = <ReadContent title={_title} sub={_desc}></ReadContent>;
-  } else if(mode === 'read'){
-    var i=0;
-    while(i < state.contents.length){
-        var data = state.contents[i];
-        if(data.id === selected_content_id){
-          _title = data.title; 
-          _desc = data.desc;   
-          break;
-        }
-        i += 1;
-    };
-  } else if(mode === 'create'){
-    _article = <CreateContent onSubmit={(_title, _desc) => {
-        // add Content to state.contents
-    }}></CreateContent>;
-  }
-  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
