@@ -1,0 +1,7 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile_front
+    ports:
+      - "3000:443"
